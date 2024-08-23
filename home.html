@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>School Web</title>
+  </head>
+  <body class="bg-[#1A1A1A] overflow-x-hidden">
+    <!-- Navbar -->
+    <nav>
+      <div
+        class="fixed navbar container h-14 w-full flex px-4 py-10 justify-between items-center"
+      >
+        <div class="logo flex items-center gap-2">
+          <div class="image-logo w-[40px]">
+            <img src="/Image/Logo Sekolah.png" alt="" />
+          </div>
+          <h4 class="text-slate-400 font-semibold text-sm">SMA IT HSI-IDN</h4>
+        </div>
+        <div class="menu relative">
+          <button class="w-[35px]" id="tombol">
+            <img src="./Image/Button.png" alt="" />
+          </button>
+
+          <ul
+            id="menu"
+            class="absolute hidden text-center transition-all duration-500 ease-in-out"
+          >
+            <li
+              class="bg-gray-300 bg-opacity-50 px-4 py-2 text-white rounded mb-4 w-[200px]"
+            >
+              <a href="">Home</a>
+            </li>
+            <li
+              class="bg-gray-300 bg-opacity-50 px-4 py-2 text-white rounded mb-4 w-[200px]"
+            >
+              <a href="">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Sidebar Start -->
+    <!-- <aside
+      class="absolute w-full h-screen bg-slate-400 translate-x-full transition-all duration-400 ease-in-out"
+    >
+      <div
+        class="container w-full h-screen bg-gray-400 p-8 flex flex-col gap-6"
+      >
+        <h4 class="text-slate-800 font-semibold text-xl">SMA IT HSI-IDN</h4>
+        <ul class="text-slate-800 font-bold text-xl flex flex-col gap-4">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Suport</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+        <button class="absolute top-6 right-6" onclick="closeNavbar()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-[25px] h-[25px] fill-slate-800"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </aside> -->
+    <!-- Sidebar End -->
+
+    <script>
+      var tombol = document.getElementById("tombol");
+      var sidebar = document.getElementById("menu");
+
+      tombol.addEventListener("click", function () {
+        sidebar.style.display = "block";
+      });
+
+      //     const Sidebar = document.querySelector("aside");
+
+      //     function openNavbar() {
+      //       Sidebar.classList.add("translate-x-0");
+      //       Sidebar.classList.remove("translate-x-full");
+      //       console.log("apa ajaj");
+      //     }
+
+      //     function closeNavbar() {
+      //       Sidebar.classList.add("translate-x-full");
+      //       Sidebar.classList.remove("translate-x-0");
+      //     }
+      //
+    </script>
+    //
+  </body>
+</html>
