@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>SMA IT HSI IDN</title>
+  </head>
+  <body class="overflow-x-hidden bg-[#161718]">
+    <!-- Navbar Start -->
+    <nav class="fixed w-full mx-auto">
+      <div class="container px-4 pt-4 flex justify-between mx-auto">
+        <div class="logo flex items-center gap-2">
+          <div class="image-logo w-[30px]">
+            <img src="/Image/Logo Sekolah.png" alt="" />
+          </div>
+          <h4 class="text-[#56585a] font-semibold text-sm">SMA IT HSI-IDN</h4>
+        </div>
+        <div class="gap-4 flex h-fit">
+          <button class="border rounded-full p-1 border-[#4c4f52]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              fill="#56585a"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+              ></path>
+            </svg>
+          </button>
+          <button
+            class="border rounded-full p-1 border-[#4c4f52]"
+            id="tombol"
+            onclick="openNavbar()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18 "
+              fill="#56585a"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M141.66,133.66l-40,40a8,8,0,0,1-11.32-11.32L116.69,136H24a8,8,0,0,1,0-16h92.69L90.34,93.66a8,8,0,0,1,11.32-11.32l40,40A8,8,0,0,1,141.66,133.66ZM200,32H136a8,8,0,0,0,0,16h56V208H136a8,8,0,0,0,0,16h64a8,8,0,0,0,8-8V40A8,8,0,0,0,200,32Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <ul
+        class="flex gap-6 border-b border-gray-700 px-4 text-[#4c4f52] text-sm font-semibold overflow-x-auto"
+      >
+        <li class="hover:text-white hover:border-b py-2">
+          <a href="">Home</a>
+        </li>
+        <li class="hover:text-white hover:border-b py-2">
+          <a href="">About</a>
+        </li>
+        <li class="hover:text-white hover:border-b py-2">
+          <a href="">Guru</a>
+        </li>
+        <li class="hover:text-white hover:border-b py-2">
+          <a href="">Siswa</a>
+        </li>
+        <li class="hover:text-white hover:border-b py-2">
+          <a href="">Support</a>
+        </li>
+        <li class="hover:text-white hover:border-b py-2">
+          <a href="">Info</a>
+        </li>
+        <li class="hover:text-white hover:border-b py-2">
+          <a href="">Kontak</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- End Start -->
+
+    <!-- Sidebar Start -->
+    <aside
+      class="w-full absolute bg-[#161718] p-6 transition-all -translate-y-full duration-400 ease-in-out border-t border-gray-700 rounded-t-2xl shadow-md"
+    >
+      <div
+        class="container w-full h-full rounded-xl md:p-8 mx-auto md:grid md:items-center md:grid-cols-2 md:max-w-[820px] relative"
+      >
+        <button onclick="closeNavbar()" class="absolute top-0 right-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 opacity-60"
+            fill="#56585a"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+            ></path>
+          </svg>
+        </button>
+        <div class="image hidden md:block">
+          <img src="./Image/Enter OTP-amico 2.png" alt="" />
+        </div>
+        <div class="login-teks w-full flex flex-col gap-8">
+          <h4 class="text-lg font-bold text-[#56585a]">Sign In</h4>
+          <div class="flex flex-col gap-2">
+            <label for="email" class="text-sm font-semibold text-[#56585a]">
+              Email Address
+            </label>
+            <input
+              type="text"
+              id="email"
+              class="w-full h-10 border border-slate-500 rounded-full bg-[#56585a] text-white px-3 md:px-4 py-2"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="email" class="text-sm font-semibold text-[#56585a]">
+              Password
+            </label>
+            <input
+              type="text"
+              id="email"
+              class="w-full h-10 border bg-[#56585a] border-slate-500 rounded-full text-white px-3 md:px-4 py-2"
+            />
+            <a
+              href=""
+              class="text-right text-xs text-[#56585a] hover:text-sky-700"
+              >Lupa password</a
+            >
+          </div>
+          <div class="grid gap-4">
+            <button
+              class="w-full h-full bg-[#56585a] py-2 rounded-full text-white text-sm"
+            >
+              Sign In
+            </button>
+            <button
+              class="w-full h-full bg-slate-300 border py-2 rounded-full text-slate-600 text-sm"
+              onclick="closeLogin(), openRegister()"
+            >
+              Create New Account
+            </button>
+            <button
+              class="w-full h-full bg-slate-300 border py-2 rounded-full text-slate-600 text-sm"
+            >
+              Sign With Google
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- Sidebar End -->
+
+    <!-- Hero Start -->
+    <section class="bg-url()">
+      <div class="container w-full h-screen mx-auto">
+        <div class="name w-full h-full flex flex-col justify-center gap-4 p-12">
+          <h1 class="name-school font-bold text-2xl text-center text-white">
+            SMA IT <span class="text-blue-700">HSI IDN</span>
+          </h1>
+          <p class="text-sm text-center font-light text-white">
+            Sekolah unggulan yang memadukan antara kurikulm diniyah dan ilmu
+            teknologi.
+          </p>
+          <button
+            class="w-full p-2 bg-white bg-opacity-25 backdrop:blur text-slate-200 font-semibold rounded"
+          >
+            Profile
+          </button>
+          <button
+            class="w-full p-2 bg-white bg-opacity-25 backdrop:blur text-slate-200 font-semibold rounded"
+          >
+            Profile
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Hero End -->
+
+    <!-- About Start -->
+
+    <!-- About Star -->
+
+    <script>
+      const Sidebar = document.querySelector("aside");
+
+      function openNavbar() {
+        Sidebar.classList.add("translate-y-0");
+        Sidebar.classList.remove("-translate-y-full");
+        console.log("apa ajaj");
+      }
+
+      function closeNavbar() {
+        Sidebar.classList.add("-translate-y-full");
+        Sidebar.classList.remove("translate-y-0");
+      }
+    </script>
+  </body>
+</html>
