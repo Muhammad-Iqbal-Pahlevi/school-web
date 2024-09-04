@@ -33,17 +33,17 @@
           <li
             class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
           >
-            <a href="">Home</a>
+            <a href="">About</a>
           </li>
           <li
             class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
           >
-            <a href="">Home</a>
+            <a href="">Galeri</a>
           </li>
           <li
             class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
           >
-            <a href="">Home</a>
+            <a href="">Info</a>
           </li>
         </ul>
         <div class="tombol flex gap-2">
@@ -58,7 +58,7 @@
               ></path>
             </svg>
           </button>
-          <button>
+          <button onclick="openNavbar()">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="w-[24px] fill-white"
@@ -73,6 +73,32 @@
       </div>
     </nav>
     <!-- Navbar End -->
+
+    <!-- Sidebar -->
+    <aside
+      class="aside h-screen bg-[#26335D] fixed top-0 left-0 transition-all duration-200 ease-in-out md:hidden z-10 p-12 -translate-x-full flex flex-col justify-between"
+    >
+      <ul class="flex flex-col gap-8 text-sm text-white">
+        <li><a href="" class="font-bold text-xl">SMA IT HSI IDN</a></li>
+        <li><a href="">Home</a></li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="partner.html">Galeri</a>
+        </li>
+        <li>
+          <a href="service.html">Info</a>
+        </li>
+      </ul>
+      <button
+        onclick="closeNavbar()"
+        class="font-light w-fit bg-slate-500 p-2 text-xs text-white"
+      >
+        Close Navbar
+      </button>
+    </aside>
+    <!-- Sidebar -->
 
     <!-- Hero Start -->
     <section
@@ -186,10 +212,10 @@
 
     <!-- start -->
     <section
-      class="w-full bg-white p-4 flex flex-col gap-4 w-full md:flex-row md:p-12"
+      class="bg-white p-4 flex flex-col gap-4 w-full md:flex-row md:p-12"
     >
       <div
-        class="container w-full h-full flex flex-col bg-white mx-auto shadow-xl"
+        class="container w-full h-full flex flex-col bg-white mx-auto shadow"
       >
         <div class="teks p-8 w-fit h-fit flex flex-col gap-4 justify-center">
           <h1 class="uppercase font-light text-xl text-[#26335D]max-w-[250px]">
@@ -216,7 +242,34 @@
         </div>
       </div>
       <div
-        class="container w-full h-full flex flex-col bg-white mx-auto shadow-xl"
+        class="container w-full h-full flex flex-col bg-white mx-auto shadow"
+      >
+        <div class="teks p-8 w-fit h-fit flex flex-col gap-4 justify-center">
+          <h1 class="uppercase font-light text-xl text-[#26335D]max-w-[250px]">
+            Lorem ipsum dolor sit amet
+          </h1>
+          <p class="text-xs font-normal text-[#26335D]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iste
+            expedita facilis quia obcaecati, et cum corporis molestias veritatis
+            doloremque!
+          </p>
+        </div>
+        <div
+          class="iamge bg-[url('../image/hero.jpg')] bg-cover bg-center flex flex-col justify-center p-4 w-full h-full"
+        >
+          <h1
+            class="bg-white bg-opacity-50 w-fit p-2 text-lg font-medium uppercase mb-2"
+          >
+            Trending
+          </h1>
+          <p class="bg-white w-fit p-2 text-sm font-light">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
+            veritatis.
+          </p>
+        </div>
+      </div>
+      <div
+        class="container w-full h-full flex flex-col bg-white mx-auto shadow"
       >
         <div class="teks p-8 w-fit h-fit flex flex-col gap-4 justify-center">
           <h1 class="uppercase font-light text-xl text-[#26335D]max-w-[250px]">
@@ -268,37 +321,108 @@
     </section>
     <!-- fasilitas -->
 
-    <!-- footer -->
-    <footer
-      class="px-8 py-12 md:py-20 flex flex-col md:flex-row mx-auto w-full gap-8"
-    >
-      <ul class="flex flex-col gap-4 w-full md:items-center">
-        <li class="text-sm text-gray-400 font-light">Future Students</li>
-        <li class="text-sm text-gray-400 font-light">Future Students</li>
-        <li class="text-sm text-gray-400 font-light">Future Students</li>
-        <li class="text-sm text-gray-400 font-light">Future Students</li>
-      </ul>
-      <div class="w-full">
-        <img
-          src="./Image/Logo Sekolah.png"
-          alt=""
-          width="100px"
-          class="mx-auto"
-        />
-        <h1 class="font-bold text-white text-xl tracking-widest text-center">
-          SMA IT HSI IDN
-        </h1>
+    <!-- Footer Start -->
+    <footer>
+      <div
+        class="container w-full mx-auto px-8 py-12 flex flex-col md:flex-row gap-4 justify-between"
+      >
+        <div class="alamat flex flex-col gap-2">
+          <div class="flex gap-3 items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[24px]"
+              fill="#fff"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"
+              ></path>
+            </svg>
+            <h5 class="text-xs text-white font-light">
+              Jln. Gatot Subroto Purworejo
+            </h5>
+          </div>
+          <div class="flex gap-3 items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[24px]"
+              fill="#ffffff"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M231.59,90.13h0C175.44,34,80.56,34,24.41,90.13c-20,20-21.92,49.49-4.69,71.71A16,16,0,0,0,32.35,168a15.8,15.8,0,0,0,5.75-1.08l49-17.37.29-.11a16,16,0,0,0,9.75-11.73l5.9-29.52a76.52,76.52,0,0,1,49.68-.11h0l6.21,29.75a16,16,0,0,0,9.72,11.59l.29.11,49,17.39a16,16,0,0,0,18.38-5.06C253.51,139.62,251.58,110.13,231.59,90.13ZM223.67,152l-.3-.12-48.82-17.33-6.21-29.74A16,16,0,0,0,158,93a92.56,92.56,0,0,0-60.34.13,16,16,0,0,0-10.32,12l-5.9,29.51L32.63,151.86c-.1,0-.17.13-.27.17-12.33-15.91-11-36.23,3.36-50.58,25-25,58.65-37.53,92.28-37.53s67.27,12.51,92.28,37.53C234.61,115.8,236,136.12,223.67,152Zm.32,48a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,200Z"
+              ></path>
+            </svg>
+            <h5 class="text-xs text-white font-light">+6281-2345-6782</h5>
+          </div>
+          <div class="flex gap-3 items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[24px]"
+              fill="#ffffff"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"
+              ></path>
+            </svg>
+            <h5 class="text-xs text-white font-light">smaithsiidn@gmail.com</h5>
+          </div>
+        </div>
+        <div class="layanan text-white">
+          <h4 class="text-sm font-semibold mb-4">Tentang Kami</h4>
+          <ul class="">
+            <li><a href="" class="text-xs font-light">Kursus</a></li>
+            <li>
+              <a href="" class="text-xs font-light">Future Students</a>
+            </li>
+            <li>
+              <a href="" class="text-xs font-light">Keterangan</a>
+            </li>
+            <li>
+              <a href="" class="text-xs font-light">Akreditasi</a>
+            </li>
+            <li>
+              <a href="" class="text-xs font-light">Sekolah Terpadu</a>
+            </li>
+          </ul>
+        </div>
+        <div class="Sumber text-white">
+          <h4 class="text-sm font-semibold mb-4">Suport</h4>
+          <ul>
+            <li><a href="" class="text-xs font-light">HSI</a></li>
+            <li>
+              <a href="" class="text-xs font-light">IDN</a>
+            </li>
+          </ul>
+        </div>
+        <div class="Company text-white">
+          <h4 class="text-sm font-semibold mb-4">Jaringan</h4>
+          <ul c>
+            <li>
+              <a href="" class="text-xs font-light">Univercity of Oxford</a>
+            </li>
+            <li>
+              <a href="" class="text-xs font-light"
+                >Universitas Islam Madinah</a
+              >
+            </li>
+            <li>
+              <a href="" class="text-xs font-light">Poltek IDN</a>
+            </li>
+            <li>
+              <a href="" class="text-xs font-light">UGM</a>
+            </li>
+            <li>
+              <a href="" class="text-xs font-light">ITB</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <ul class="flex flex-col gap-4 w-full md:items-center">
-        <li class="text-sm text-gray-400 font-light">Future Students</li>
-        <li class="text-sm text-gray-400 font-light">Future Students</li>
-        <li class="text-sm text-gray-400 font-light">Future Students</li>
-        <li class="text-sm text-gray-400 font-light">Future Students</li>
-      </ul>
     </footer>
-    <!-- footer -->
+    <!-- Footer End -->
     <section class="bg-white">
-      <div class="container px-4 py-8">
+      <div class="container mx-auto px-4 py-8">
         <div class="media flex flex-col items-center gap-8">
           <h1 class="font-semibold text-[#26335D] text-xl">Social Media</h1>
           <ul class="flex flex-col md:flex-row gap-4 md:gap-8">
@@ -355,7 +479,7 @@
               </svg>
             </li>
           </ul>
-          <h1 class="copy-right text-[#26335D] text-xl text-center">
+          <h1 class="copy-right text-[#26335D] text-xs text-center">
             © BY SMA IT HSI IDN
           </h1>
         </div>
@@ -375,6 +499,17 @@
         }
       }
       window.addEventListener("scroll", handleScroll);
+
+      const sidebar = document.querySelector("aside");
+
+      function openNavbar() {
+        sidebar.classList.add("translate-x-0");
+        sidebar.classList.remove("-translate-x-full");
+      }
+      function closeNavbar() {
+        sidebar.classList.remove("translate-x-0");
+        sidebar.classList.add("-translate-x-full");
+      }
     </script>
   </body>
 </html>
