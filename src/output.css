@@ -683,14 +683,6 @@ video {
   z-index: 10;
 }
 
-.order-1 {
-  order: 1;
-}
-
-.row-start-1 {
-  grid-row-start: 1;
-}
-
 .float-start {
   float: inline-start;
 }
@@ -746,6 +738,10 @@ video {
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
 }
 
 .mt-2 {
@@ -872,6 +868,18 @@ video {
   height: 100vh;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[300px\] {
+  height: 300px;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
 .max-h-\[400px\] {
   max-height: 400px;
 }
@@ -903,6 +911,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[300px\] {
+  width: 300px;
 }
 
 .max-w-\[250px\] {
@@ -1943,11 +1959,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-slate-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1956,8 +1967,8 @@ video {
   background-image: url('../image/hero.jpg');
 }
 
-.bg-\[url\(\'\.\/image\/hero\.jpg\'\)\] {
-  background-image: url('./image/hero.jpg');
+.bg-\[url\(\'\.\/\.\.\/image\/hero\.jpg\'\)\] {
+  background-image: url('./../image/hero.jpg');
 }
 
 .decoration-slice {
@@ -2859,18 +2870,6 @@ body::-webkit-scrollbar {
     right: 0px;
   }
 
-  .md\:order-1 {
-    order: 1;
-  }
-
-  .md\:col-start-1 {
-    grid-column-start: 1;
-  }
-
-  .md\:row-start-1 {
-    grid-row-start: 1;
-  }
-
   .md\:mt-20 {
     margin-top: 5rem;
   }
@@ -2893,14 +2892,6 @@ body::-webkit-scrollbar {
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:flex-row-reverse {
-    flex-direction: row-reverse;
-  }
-
-  .md\:gap-12 {
-    gap: 3rem;
   }
 
   .md\:gap-16 {
