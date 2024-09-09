@@ -15,7 +15,7 @@
   <body class="bg-[#26335D]">
     <!-- Navbar Start -->
     <nav
-      class="transition-colors duration-500 bg-transparent fixed w-full z-10 top-0"
+      class="transition-colors duration-500 fixed w-full z-10 top-0 bg-[#26335D]"
     >
       <div
         class="container mx-auto flex justify-between p-4 lg:px-20 items-center"
@@ -37,12 +37,7 @@
           <li
             class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
           >
-            <a href="">Galeri</a>
-          </li>
-          <li
-            class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
-          >
-            <a href="berita.html">Blog</a>
+            <a href="">Blog</a>
           </li>
         </ul>
         <div class="tombol flex gap-2">
@@ -57,7 +52,7 @@
               ></path>
             </svg>
           </button>
-          <button onclick="openNavbar()">
+          <button onclick="openNavbar()" class="md:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="w-[24px] fill-white"
@@ -84,10 +79,7 @@
           <a href="about.html">About</a>
         </li>
         <li>
-          <a href="">Galeri</a>
-        </li>
-        <li>
-          <a href="berita.html">Blog</a>
+          <a href="">Blog</a>
         </li>
       </ul>
       <button
@@ -99,106 +91,166 @@
     </aside>
     <!-- Sidebar -->
 
-    <!-- Galeri -->
-    <section class="mt-12">
-      <div class="container mx-auto md:p-12 p-4 flex flex-col gap-4 md:gap-8">
-        <div class="title flex flex-col gap-2 md:items-center">
-          <h1 class="text-2xl text-white font-bold">Our Gallery</h1>
-          <p class="text-xs font-extralight text-white">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-            inventore rem iure magnam, facere tempore tempora consequuntur
-            repellat sint officiis?
+    <!-- Blog -->
+    <section class="bg-white mt-12">
+      <div class="container px-4 py-8 text-white gap-4 mx-auto">
+        <h1 class="text-center text-2xl text-[#26335D] font-extralight mb-4">
+          Recently On The Blog
+        </h1>
+        <div
+          class="card-blog flex flex-col items-center p-4 gap-2 bg-[#26335D] shadow-xl rounded-md"
+        >
+          <h4 class="font-light border w-full text-center rounded-md p-2">
+            Blog
+          </h4>
+          <h1
+            class="text-xl font-sans tracking-wider font-semibold border w-full text-center rounded-md p-2"
+          >
+            SMA IT HSI IDN
+          </h1>
+          <div class="image w-full h-[400px]">
+            <img src="Image/hero.jpg" alt="" class="w-full h-full rounded-md" />
+          </div>
+          <p class="text-xs text-center font-extralight">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
+            fugit?
           </p>
         </div>
-        <div class="gallery mx-auto grid md:grid-cols-3 gap-4">
+        <div
+          class="blog-content grid md:grid-cols-3 gap-12 justify-center mt-12"
+        >
           <div
-            class="card mx-auto w-full bg-white rounded overflow-hidden shadow"
+            class="card-blog flex flex-col items-center p-4 gap-4 bg-[#26335D] shadow-lg w-[300px] relative rounded-md"
           >
-            <div class="image w-full h-[200px] bg-slate-500">
-              <img src="Image/hero.jpg" alt="" class="w-full h-full" />
+            <h1
+              class="bg-white text-[#26335D] shadow-md rounded text-xs p-2 absolute -top-5"
+            >
+              17-Agustus-2024
+            </h1>
+            <div class="image w-full h-[300px] mt-4">
+              <img src="Image/DSC_0382.JPG" alt="" class="w-full h-full" />
             </div>
-            <div class="teks p-4">
-              <h1 class="font-semibold text-[#26335D]">17 Agustus 2024</h1>
-              <p class="text-xs text-[#26335D]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                ut.
-              </p>
-            </div>
+            <p class="text-xs text-center font-light">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
+              fugit?
+            </p>
+            <a
+              class="bg-white px-6 py-1 text-[#26335D] rounded font-light"
+              href="berita.html"
+              target="_blank"
+            >
+              Read
+            </a>
           </div>
           <div
-            class="card mx-auto w-full bg-white rounded overflow-hidden shadow"
+            class="card-blog flex flex-col items-center p-4 gap-4 bg-[#26335D] shadow-lg w-[300px] relative rounded-md"
           >
-            <div class="image w-full h-[200px] bg-slate-500">
-              <img src="Image/hero.jpg" alt="" class="w-full h-full" />
+            <h1
+              class="bg-white text-[#26335D] shadow-md rounded text-xs p-2 absolute -top-5"
+            >
+              17-Agustus-2024
+            </h1>
+            <div class="image w-full h-[300px] mt-4">
+              <img src="Image/DSC_0382.JPG" alt="" class="w-full h-full" />
             </div>
-            <div class="teks p-4">
-              <h1 class="font-semibold text-[#26335D]">17 Agustus 2024</h1>
-              <p class="text-xs text-[#26335D]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                ut.
-              </p>
-            </div>
+            <p class="text-xs text-center font-light">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
+              fugit?
+            </p>
+            <button
+              class="bg-white px-6 py-1 text-[#26335D] rounded font-light"
+            >
+              Read
+            </button>
           </div>
           <div
-            class="card mx-auto w-full bg-white rounded overflow-hidden shadow"
+            class="card-blog flex flex-col items-center p-4 gap-4 bg-[#26335D] shadow-lg w-[300px] relative rounded-md"
           >
-            <div class="image w-full h-[200px] bg-slate-500">
-              <img src="Image/hero.jpg" alt="" class="w-full h-full" />
+            <h1
+              class="bg-white text-[#26335D] shadow-md rounded text-xs p-2 absolute -top-5"
+            >
+              17-Agustus-2024
+            </h1>
+            <div class="image w-full h-[300px] mt-4">
+              <img src="Image/DSC_0382.JPG" alt="" class="w-full h-full" />
             </div>
-            <div class="teks p-4">
-              <h1 class="font-semibold text-[#26335D]">17 Agustus 2024</h1>
-              <p class="text-xs text-[#26335D]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                ut.
-              </p>
-            </div>
+            <p class="text-xs text-center font-light">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
+              fugit?
+            </p>
+            <button
+              class="bg-white px-6 py-1 text-[#26335D] rounded font-light"
+            >
+              Read
+            </button>
           </div>
           <div
-            class="card mx-auto w-full bg-white rounded overflow-hidden shadow"
+            class="card-blog flex flex-col items-center p-4 gap-4 bg-[#26335D] shadow-lg w-[300px] relative rounded-md"
           >
-            <div class="image w-full h-[200px] bg-slate-500">
-              <img src="Image/hero.jpg" alt="" class="w-full h-full" />
+            <h1
+              class="bg-white text-[#26335D] shadow-md rounded text-xs p-2 absolute -top-5"
+            >
+              17-Agustus-2024
+            </h1>
+            <div class="image w-full h-[300px] mt-4">
+              <img src="Image/DSC_0382.JPG" alt="" class="w-full h-full" />
             </div>
-            <div class="teks p-4">
-              <h1 class="font-semibold text-[#26335D]">17 Agustus 2024</h1>
-              <p class="text-xs text-[#26335D]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                ut.
-              </p>
-            </div>
+            <p class="text-xs text-center font-light">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
+              fugit?
+            </p>
+            <button
+              class="bg-white px-6 py-1 text-[#26335D] rounded font-light"
+            >
+              Read
+            </button>
           </div>
           <div
-            class="card mx-auto w-full bg-white rounded overflow-hidden shadow"
+            class="card-blog flex flex-col items-center p-4 gap-4 bg-[#26335D] shadow-lg w-[300px] relative rounded-md"
           >
-            <div class="image w-full h-[200px] bg-slate-500">
-              <img src="Image/hero.jpg" alt="" class="w-full h-full" />
+            <h1
+              class="bg-white text-[#26335D] shadow-md rounded text-xs p-2 absolute -top-5"
+            >
+              17-Agustus-2024
+            </h1>
+            <div class="image w-full h-[300px] mt-4">
+              <img src="Image/DSC_0382.JPG" alt="" class="w-full h-full" />
             </div>
-            <div class="teks p-4">
-              <h1 class="font-semibold text-[#26335D]">17 Agustus 2024</h1>
-              <p class="text-xs text-[#26335D]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                ut.
-              </p>
-            </div>
+            <p class="text-xs text-center font-light">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
+              fugit?
+            </p>
+            <button
+              class="bg-white px-6 py-1 text-[#26335D] rounded font-light"
+            >
+              Read
+            </button>
           </div>
           <div
-            class="card mx-auto w-full bg-white rounded overflow-hidden shadow"
+            class="card-blog flex flex-col items-center p-4 gap-4 bg-[#26335D] shadow-lg w-[300px] relative rounded-md"
           >
-            <div class="image w-full h-[200px] bg-slate-500">
-              <img src="Image/hero.jpg" alt="" class="w-full h-full" />
+            <h1
+              class="bg-white text-[#26335D] shadow-md rounded text-xs p-2 absolute -top-5"
+            >
+              17-Agustus-2024
+            </h1>
+            <div class="image w-full h-[300px] mt-4">
+              <img src="Image/DSC_0382.JPG" alt="" class="w-full h-full" />
             </div>
-            <div class="teks p-4">
-              <h1 class="font-semibold text-[#26335D]">17 Agustus 2024</h1>
-              <p class="text-xs text-[#26335D]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                ut.
-              </p>
-            </div>
+            <p class="text-xs text-center font-light">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
+              fugit?
+            </p>
+            <button
+              class="bg-white px-6 py-1 text-[#26335D] rounded font-light"
+            >
+              Read
+            </button>
           </div>
         </div>
       </div>
     </section>
-    <!-- Galeri -->
+    <!-- Blog -->
 
     <!-- Footer Start -->
     <footer>
@@ -366,19 +418,19 @@
     </section>
 
     <script>
-      var navbar = document.querySelector("nav");
+      //var navbar = document.querySelector("nav");
 
       // Fungsi untuk mengubah background navbar saat di-scroll
-      function handleScroll() {
-        if (window.scrollY > 0) {
-          navbar.classList.add("bg-[#26335D]", "shadow-md", "navbar-bg");
-          navbar.classList.remove("bg-transparent");
-        } else {
-          navbar.classList.add("bg-transparent");
-          navbar.classList.remove("bg-[#26335D]", "shadow-md", "navbar-bg");
-        }
-      }
-      window.addEventListener("scroll", handleScroll);
+      // function handleScroll() {
+      //   if (window.scrollY > 0) {
+      //     navbar.classList.add("bg-[#26335D]", "shadow-md", "navbar-bg");
+      //     navbar.classList.remove("bg-transparent");
+      //   } else {
+      //     navbar.classList.add("bg-transparent");
+      //     navbar.classList.remove("bg-[#26335D]", "shadow-md", "navbar-bg");
+      //   }
+      // }
+      // window.addEventListener("scroll", handleScroll);
 
       const sidebar = document.querySelector("aside");
 

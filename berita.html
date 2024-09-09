@@ -13,127 +13,8 @@
     <title>SMA IT HSI IDN</title>
   </head>
   <body class="bg-[#26335D]">
-    <!-- Navbar Start -->
-    <nav
-      class="transition-colors duration-500 bg-transparent fixed w-full z-10 top-0"
-    >
-      <div
-        class="container mx-auto flex justify-between p-4 lg:px-20 items-center"
-      >
-        <h1 class="font-bold text-lg md:text-2xl text-white">
-          <span class="text-sky-500">SMA</span> IT
-        </h1>
-        <ul class="hidden md:flex md:gap-8 text-white text-sm">
-          <li
-            class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
-          >
-            <a href="index.html">Home</a>
-          </li>
-          <li
-            class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
-          >
-            <a href="about.html">About</a>
-          </li>
-          <li
-            class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
-          >
-            <a href="galery.html">Galeri</a>
-          </li>
-          <li
-            class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
-          >
-            <a href="">Blog</a>
-          </li>
-        </ul>
-        <div class="tombol flex gap-2">
-          <button>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-[24px] fill-white"
-              viewBox="0 0 256 256"
-            >
-              <path
-                d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
-              ></path>
-            </svg>
-          </button>
-          <button onclick="openNavbar()">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-[24px] fill-white"
-              viewBox="0 0 256 256"
-            >
-              <path
-                d="M128,96a32,32,0,1,0,32,32A32,32,0,0,0,128,96Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,128,144Zm0-64A32,32,0,1,0,96,48,32,32,0,0,0,128,80Zm0-48a16,16,0,1,1-16,16A16,16,0,0,1,128,32Zm0,144a32,32,0,1,0,32,32A32,32,0,0,0,128,176Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,128,224Z"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- Sidebar -->
-    <aside
-      class="aside h-screen bg-[#26335D] fixed top-0 left-0 transition-all duration-200 ease-in-out md:hidden z-10 p-12 -translate-x-full flex flex-col justify-between"
-    >
-      <ul class="flex flex-col gap-8 text-sm text-white">
-        <li><a href="" class="font-bold text-xl">SMA IT HSI IDN</a></li>
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="about.html">About</a>
-        </li>
-        <li>
-          <a href="galery.html">Galeri</a>
-        </li>
-        <li>
-          <a href="">Blog</a>
-        </li>
-      </ul>
-      <button
-        onclick="closeNavbar()"
-        class="font-light w-fit bg-slate-500 p-2 text-xs text-white"
-      >
-        Close Navbar
-      </button>
-    </aside>
-    <!-- Sidebar -->
-
-    <!-- Hero Start -->
-    <section
-      class="hero w-full h-screen bg-[url('./../image/hero.jpg')] bg-cover bg-center"
-    >
-      <div
-        class="container w-fit h-full mx-auto flex flex-col items-center justify-center p-8 gap-4"
-      >
-        <h4 class="text-white text-sm md:text-base font-light">Welcome to</h4>
-        <h1
-          class="text-white text-2xl font-bold tracking-widest sha md:text-4xl"
-        >
-          SMA IT <span class="text-sky-500">HSI IDN</span>
-        </h1>
-        <p class="text-white md:w-1/2 text-center text-sm font-light">
-          Sekolah unggulan yang berfokus pada diniyah, ilmu teknologi dan bahasa
-          asing.
-        </p>
-        <div class="flex gap-4">
-          <button
-            class="px-6 py-2 border-2 rounded text-white hover:bg-sky-700 hover:border-none font-medium transition-all duration-500 ease-in-out"
-          >
-            Profile
-          </button>
-          <button
-            class="px-6 py-2 border-2 rounded text-white hover:bg-sky-700 hover:border-none font-medium transition-all duration-500 ease-in-out"
-          >
-            Video
-          </button>
-        </div>
-      </div>
-    </section>
-    <!-- Hero Start -->
-
     <!-- Blog -->
-    <section class="md:p-12">
+    <section class="md:mt-8">
       <div
         class="container p-6 md:p-12 mx-auto bg-white flex flex-col md:flex-row gap-8"
       >
@@ -184,7 +65,11 @@
               dolorem temporibus!
             </p>
           </div>
-          <h1 class="text-sm font-bold">Blog Lain-nya........</h1>
+          <h4
+            class="text-sm w-full text-white text-center p-2 md:text-base font-light bg-[#26335D] mb-4"
+          >
+            Blog Lainnya
+          </h4>
           <div class="more grid md:grid-cols-2 gap-4">
             <div
               class="card mx-auto w-full bg-white rounded overflow-hidden shadow"
