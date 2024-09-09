@@ -1,15 +1,24 @@
+<?php
+
+require 'connect.php';
+
+$artikels = getData("SELECT * FROM artikels");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="src/output.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
     <title>SMA IT HSI IDN</title>
   </head>
   <body class="bg-[#26335D]">
@@ -27,17 +36,18 @@
           <li
             class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
           >
-            <a href="index.html">Home</a>
+            <a href="">Home</a>
           </li>
           <li
             class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
           >
-            <a href="about.html">About</a>
+            <a href="about.php">About</a>
           </li>
+
           <li
             class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
           >
-            <a href="blog.html">Blog</a>
+            <a href="blog.php">Blog</a>
           </li>
         </ul>
         <div class="tombol flex gap-2">
@@ -74,13 +84,13 @@
     >
       <ul class="flex flex-col gap-8 text-sm text-white">
         <li><a href="" class="font-bold text-xl">SMA IT HSI IDN</a></li>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="">Home</a></li>
         <li>
-          <a href="about.html">About</a>
+          <a href="about.php">About</a>
         </li>
 
         <li>
-          <a href="blog.html">Blog</a>
+          <a href="blog.php">Blog</a>
         </li>
       </ul>
       <button
@@ -94,7 +104,7 @@
 
     <!-- Hero Start -->
     <section
-      class="hero w-full h-screen bg-[url('../image/hero.jpg')] bg-cover bg-center"
+      class="hero w-full h-screen bg-[url('./../image/hero.jpg')] bg-cover bg-center"
     >
       <div
         class="container w-fit h-full mx-auto flex flex-col items-center justify-center p-8 gap-4"
@@ -125,67 +135,193 @@
     </section>
     <!-- Hero Start -->
 
-    <!-- Sejarah Start -->
+    <!-- unggulan start -->
     <section class="w-full">
-      <div class="w-full h-full grid md:grid-cols-2">
-        <div class="teks p-4 md:p-20 flex flex-col gap-4 justify-center">
-          <h4 class="text-sm text-white font-extralight">Sejarah</h4>
-          <h1 class="text-2xl md:text-4xl text-white font-bold tracking-widest">
-            SMA IT HSI IDN
-          </h1>
-          <hr />
-          <p class="text-sm font-light text-white text-justify">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
-            iste, veniam est accusamus, ex ad placeat amet sed autem hic
-            repudiandae illum laboriosam ratione provident ipsam magnam sint
-            adipisci omnis ipsum. Provident exercitationem totam aliquid ea aut
-            fugiat, explicabo quia deserunt facere pariatur tempore officiis
-            ipsa ad aspernatur repellendus adipisci excepturi cumque placeat.
-            Repudiandae quasi sed esse facere veritatis adipisci, optio atque
-            tempore quisquam sit, quos error neque eveniet delectus aperiam
-            quae, odit dolore ratione vitae magni. Dolorum quod laboriosam,
-            tenetur tempore, nihil aspernatur culpa cupiditate a qui, esse
-            possimus quos accusamus debitis reprehenderit repellat sunt minus
-            quasi cum quaerat.
-          </p>
-        </div>
-        <div class="image w-full h-full bg-slate-200">
-          <img src="Image/hero.jpg" alt="" class="w-full h-full" />
+      <div class="container mx-auto relative">
+        <div
+          class="card w-fit flex flex-col gap-8 mx-auto py-8 justify-between md:flex-row md:absolute md:-top-36 md:left-0 md:right-0"
+        >
+          <div
+            class="card-content max-w-[300px] bg-white mx-auto p-8 flex flex-col gap-2 shadow-xl"
+          >
+            <img src="./Image/circle.png" alt="" class="w-[72px] h-[72px]" />
+            <h1 class="text-xl font-bold">Diniyah</h1>
+            <hr class="bg-gray-800" />
+            <p class="text-sm">
+              Pelajaran diniyah yang sesuai dengan manhaj ahlu sunnah wal
+              jama'ah
+            </p>
+          </div>
+          <div
+            class="card-content max-w-[300px] bg-white mx-auto p-8 flex flex-col gap-2 shadow-xl"
+          >
+            <img src="./Image/circle.png" alt="" class="w-[72px] h-[72px]" />
+            <h1 class="text-xl font-bold">Diniyah</h1>
+            <hr class="bg-gray-800" />
+            <p class="text-sm">
+              Pelajaran diniyah yang sesuai dengan manhaj ahlu sunnah wal
+              jama'ah
+            </p>
+          </div>
+          <div
+            class="card-content max-w-[300px] bg-white mx-auto p-8 flex flex-col gap-2 shadow-xl"
+          >
+            <img src="./Image/circle.png" alt="" class="w-[72px] h-[72px]" />
+            <h1 class="text-xl font-bold">Diniyah</h1>
+            <hr class="bg-gray-800" />
+            <p class="text-sm">
+              Pelajaran diniyah yang sesuai dengan manhaj ahlu sunnah wal
+              jama'ah
+            </p>
+          </div>
         </div>
       </div>
     </section>
-    <!-- Sejarah End -->
+    <!-- unggulan end -->
 
-    <!-- Selayang pandang Start -->
-    <section class="w-full">
-      <div class="w-full h-full grid md:grid-cols-2">
-        <div class="image w-full h-full bg-slate-200">
-          <img src="Image/hero.jpg" alt="" class="w-full h-full" />
+    <!-- profile start -->
+    <section class="w-full h-screen">
+      <div
+        class="w-full h-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mx-auto md:mt-20"
+      >
+        <div
+          class="image max-w-[500px] max-h-[400px] md:border-2 md:border-white rounded overflow-hidden"
+        >
+          <img src="./Image/hero-1.JPG" alt="" class="w-full h-full" />
         </div>
-        <div class="teks p-4 md:p-20 flex flex-col gap-4 justify-center">
-          <h4 class="text-sm text-white font-extralight">Selayang Pandang</h4>
-          <h1 class="text-2xl md:text-4xl text-white font-bold tracking-widest">
+        <div class="flex max-w-[400px] flex-col gap-4 p-4">
+          <h6 class="text-white text-xs tracking-widest font-thin">
+            Video Profile
+          </h6>
+          <h1 class="text-2xl tracking-widest md:text-4xl font-bold text-white">
             SMA IT HSI IDN
           </h1>
-          <hr />
-          <p class="text-sm font-light text-white text-justify">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
-            iste, veniam est accusamus, ex ad placeat amet sed autem hic
-            repudiandae illum laboriosam ratione provident ipsam magnam sint
-            adipisci omnis ipsum. Provident exercitationem totam aliquid ea aut
-            fugiat, explicabo quia deserunt facere pariatur tempore officiis
-            ipsa ad aspernatur repellendus adipisci excepturi cumque placeat.
-            Repudiandae quasi sed esse facere veritatis adipisci, optio atque
-            tempore quisquam sit, quos error neque eveniet delectus aperiam
-            quae, odit dolore ratione vitae magni. Dolorum quod laboriosam,
-            tenetur tempore, nihil aspernatur culpa cupiditate a qui, esse
-            possimus quos accusamus debitis reprehenderit repellat sunt minus
-            quasi cum quaerat.
+          <p class="text-xs font-light text-white">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+            illo architecto, molestias recusandae fugiat impedit mollitia
+            aliquid? Illo dolores expedita harum, incidunt vel tenetur nulla
+            quos qui mollitia pariatur eos!
+          </p>
+          <button
+            class="px-16 py-2 border-2 rounded text-white hover:bg-sky-700 hover:border-none font-medium transition-all duration-500 ease-in-out w-fit"
+          >
+            Video
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- profile end -->
+
+    <!-- start -->
+    <section
+      class="bg-white p-4 flex flex-col gap-4 w-full md:flex-row md:p-12"
+    >
+      <div
+        class="container w-full h-full flex flex-col bg-white mx-auto shadow"
+      >
+        <div class="teks p-8 w-fit h-fit flex flex-col gap-4 justify-center">
+          <h1 class="uppercase font-light text-xl text-[#26335D]max-w-[250px]">
+            Lorem ipsum dolor sit amet
+          </h1>
+          <p class="text-xs font-normal text-[#26335D]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iste
+            expedita facilis quia obcaecati, et cum corporis molestias veritatis
+            doloremque!
+          </p>
+        </div>
+        <div
+          class="iamge bg-[url('../image/hero.jpg')] bg-cover bg-center flex flex-col justify-center p-4 w-full h-full"
+        >
+          <h1
+            class="bg-white bg-opacity-50 w-fit p-2 text-lg font-medium uppercase mb-2"
+          >
+            Trending
+          </h1>
+          <p class="bg-white w-fit p-2 text-sm font-light">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
+            veritatis.
+          </p>
+        </div>
+      </div>
+      <div
+        class="container w-full h-full flex flex-col bg-white mx-auto shadow"
+      >
+        <div class="teks p-8 w-fit h-fit flex flex-col gap-4 justify-center">
+          <h1 class="uppercase font-light text-xl text-[#26335D]max-w-[250px]">
+            Lorem ipsum dolor sit amet
+          </h1>
+          <p class="text-xs font-normal text-[#26335D]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iste
+            expedita facilis quia obcaecati, et cum corporis molestias veritatis
+            doloremque!
+          </p>
+        </div>
+        <div
+          class="iamge bg-[url('../image/hero.jpg')] bg-cover bg-center flex flex-col justify-center p-4 w-full h-full"
+        >
+          <h1
+            class="bg-white bg-opacity-50 w-fit p-2 text-lg font-medium uppercase mb-2"
+          >
+            Trending
+          </h1>
+          <p class="bg-white w-fit p-2 text-sm font-light">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
+            veritatis.
+          </p>
+        </div>
+      </div>
+      <div
+        class="container w-full h-full flex flex-col bg-white mx-auto shadow"
+      >
+        <div class="teks p-8 w-fit h-fit flex flex-col gap-4 justify-center">
+          <h1 class="uppercase font-light text-xl text-[#26335D]max-w-[250px]">
+            Lorem ipsum dolor sit amet
+          </h1>
+          <p class="text-xs font-normal text-[#26335D]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iste
+            expedita facilis quia obcaecati, et cum corporis molestias veritatis
+            doloremque!
+          </p>
+        </div>
+        <div
+          class="iamge bg-[url('../image/hero.jpg')] bg-cover bg-center flex flex-col justify-center p-4 w-full h-full"
+        >
+          <h1
+            class="bg-white bg-opacity-50 w-fit p-2 text-lg font-medium uppercase mb-2"
+          >
+            Trending
+          </h1>
+          <p class="bg-white w-fit p-2 text-sm font-light">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
+            veritatis.
           </p>
         </div>
       </div>
     </section>
-    <!-- Selayang Pandang End -->
+    <!--  end -->
+
+    <!-- fasilitas -->
+    <section>
+      <div class="flex flex-col md:flex-row mx-auto">
+        <div
+          class="fasilitas w-full h-[350px] bg-[url('../image/hero.jpg')] bg-cover bg-center flex flex-col justify-center items-center"
+        >
+          <h1 class="text-white font-semibold text-xl">Atlethics</h1>
+          <h4 class="text-sm text-white font-extralight tracking-widest">
+            Sport Club
+          </h4>
+        </div>
+        <div
+          class="fasilitas w-full h-[350px] bg-[url('../image/hero.jpg')] bg-cover bg-center flex flex-col justify-center items-center"
+        >
+          <h1 class="text-white font-semibold text-xl">Atlethics</h1>
+          <h4 class="text-sm text-white font-extralight tracking-widest">
+            Sport Club
+          </h4>
+        </div>
+      </div>
+    </section>
+    <!-- fasilitas -->
 
     <!-- Footer Start -->
     <footer>
@@ -351,7 +487,6 @@
         </div>
       </div>
     </section>
-
     <script>
       var navbar = document.querySelector("nav");
 

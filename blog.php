@@ -1,3 +1,12 @@
+<?php
+
+require 'connect.php';
+
+$artikels = getData("SELECT * FROM artikels limit 6");
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,12 +36,12 @@
           <li
             class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
           >
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
           </li>
           <li
             class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
           >
-            <a href="about.html">About</a>
+            <a href="about.php">About</a>
           </li>
           <li
             class="hover:bg-gray-600 py-2 px-4 rounded transition-all duration-300 ease-in-out"
@@ -74,9 +83,9 @@
     >
       <ul class="flex flex-col gap-8 text-sm text-white">
         <li><a href="" class="font-bold text-xl">SMA IT HSI IDN</a></li>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li>
-          <a href="about.html">About</a>
+          <a href="about.php">About</a>
         </li>
         <li>
           <a href="">Blog</a>
@@ -94,9 +103,6 @@
     <!-- Blog -->
     <section class="bg-white mt-12">
       <div class="container px-4 py-8 text-white gap-4 mx-auto">
-        <h1 class="text-center text-2xl text-[#26335D] font-extralight mb-4">
-          Recently On The Blog
-        </h1>
         <div
           class="card-blog flex flex-col items-center p-4 gap-2 bg-[#26335D] shadow-xl rounded-md"
         >
@@ -116,137 +122,34 @@
             fugit?
           </p>
         </div>
+        <h1 class="text-center text-2xl text-[#26335D] font-extralight my-8">
+          Recently On The Blog
+        </h1>
         <div
           class="blog-content grid md:grid-cols-3 gap-12 justify-center mt-12"
         >
+        <?php foreach($artikels as $artikel): ?>
           <div
-            class="card-blog flex flex-col items-center p-4 gap-4 bg-[#26335D] shadow-lg w-[300px] relative rounded-md"
+            class="card-blog  items-center p-4  bg-[#26335D] shadow-lg w-[300px]   rounded-md"
           >
             <h1
-              class="bg-white text-[#26335D] shadow-md rounded text-xs p-2 absolute -top-5"
+              class="bg-white text-[#26335D] rounded text-sm text-center p-2 truncate " 
             >
-              17-Agustus-2024
+              <?= $artikel['title'] ?>
             </h1>
-            <div class="image w-full h-[300px] mt-4">
-              <img src="Image/DSC_0382.JPG" alt="" class="w-full h-full" />
+            <div class="image w-full h-[200px] mt-4">
+              <img src="Image/DSC_0382.JPG" alt="" class="w-full h-full rounded" />
             </div>
-            <p class="text-xs text-center font-light">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
-              fugit?
-            </p>
-            <a
-              class="bg-white px-6 py-1 text-[#26335D] rounded font-light"
-              href="berita.html"
-              target="_blank"
-            >
-              Read
-            </a>
-          </div>
-          <div
-            class="card-blog flex flex-col items-center p-4 gap-4 bg-[#26335D] shadow-lg w-[300px] relative rounded-md"
-          >
-            <h1
-              class="bg-white text-[#26335D] shadow-md rounded text-xs p-2 absolute -top-5"
-            >
-              17-Agustus-2024
-            </h1>
-            <div class="image w-full h-[300px] mt-4">
-              <img src="Image/DSC_0382.JPG" alt="" class="w-full h-full" />
-            </div>
-            <p class="text-xs text-center font-light">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
-              fugit?
+            <p class="text-xs text-center  font-light p-2 truncate ">
+              <?= $artikel['content'] ?>
             </p>
             <button
-              class="bg-white px-6 py-1 text-[#26335D] rounded font-light"
+              class="bg-white px-6 py-1 text-[#26335D] rounded mx-auto font-light"
             >
               Read
             </button>
           </div>
-          <div
-            class="card-blog flex flex-col items-center p-4 gap-4 bg-[#26335D] shadow-lg w-[300px] relative rounded-md"
-          >
-            <h1
-              class="bg-white text-[#26335D] shadow-md rounded text-xs p-2 absolute -top-5"
-            >
-              17-Agustus-2024
-            </h1>
-            <div class="image w-full h-[300px] mt-4">
-              <img src="Image/DSC_0382.JPG" alt="" class="w-full h-full" />
-            </div>
-            <p class="text-xs text-center font-light">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
-              fugit?
-            </p>
-            <button
-              class="bg-white px-6 py-1 text-[#26335D] rounded font-light"
-            >
-              Read
-            </button>
-          </div>
-          <div
-            class="card-blog flex flex-col items-center p-4 gap-4 bg-[#26335D] shadow-lg w-[300px] relative rounded-md"
-          >
-            <h1
-              class="bg-white text-[#26335D] shadow-md rounded text-xs p-2 absolute -top-5"
-            >
-              17-Agustus-2024
-            </h1>
-            <div class="image w-full h-[300px] mt-4">
-              <img src="Image/DSC_0382.JPG" alt="" class="w-full h-full" />
-            </div>
-            <p class="text-xs text-center font-light">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
-              fugit?
-            </p>
-            <button
-              class="bg-white px-6 py-1 text-[#26335D] rounded font-light"
-            >
-              Read
-            </button>
-          </div>
-          <div
-            class="card-blog flex flex-col items-center p-4 gap-4 bg-[#26335D] shadow-lg w-[300px] relative rounded-md"
-          >
-            <h1
-              class="bg-white text-[#26335D] shadow-md rounded text-xs p-2 absolute -top-5"
-            >
-              17-Agustus-2024
-            </h1>
-            <div class="image w-full h-[300px] mt-4">
-              <img src="Image/DSC_0382.JPG" alt="" class="w-full h-full" />
-            </div>
-            <p class="text-xs text-center font-light">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
-              fugit?
-            </p>
-            <button
-              class="bg-white px-6 py-1 text-[#26335D] rounded font-light"
-            >
-              Read
-            </button>
-          </div>
-          <div
-            class="card-blog flex flex-col items-center p-4 gap-4 bg-[#26335D] shadow-lg w-[300px] relative rounded-md"
-          >
-            <h1
-              class="bg-white text-[#26335D] shadow-md rounded text-xs p-2 absolute -top-5"
-            >
-              17-Agustus-2024
-            </h1>
-            <div class="image w-full h-[300px] mt-4">
-              <img src="Image/DSC_0382.JPG" alt="" class="w-full h-full" />
-            </div>
-            <p class="text-xs text-center font-light">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
-              fugit?
-            </p>
-            <button
-              class="bg-white px-6 py-1 text-[#26335D] rounded font-light"
-            >
-              Read
-            </button>
-          </div>
+        <?php endforeach; ?>
         </div>
       </div>
     </section>
